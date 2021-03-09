@@ -31,10 +31,5 @@ class UserController extends Controller
         return $v;
 
     }
-    public function delete($id){
-        $video = Video::where('id',$id)->first();
-        $video->delete();
 
-        return back();
-    }
 }

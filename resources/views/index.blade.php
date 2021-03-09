@@ -37,7 +37,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                 <div class="position-relative tm-thumbnail-container">
                                     <video width="320" height="240" controls>
-                                        <source src="{{asset('storage/'.$video->route)}}" type="videos/mp4">
+                                        <source src="{{asset('storage/'.$video->route)}}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                     @if(Auth::user()->role_id == 2 || Auth::user()->role_id == 3 || Auth::user()->role_id == 4)
@@ -52,8 +52,12 @@
                                     <p class="tm-catalog-item-text">{{$video->desc}}</p>
                                     <p class="tm-catalog-item-text">{{$video->created_at}}</p>
                                     @if($video['user_id'] == Auth::user()->id || Auth::user()->id == 3)
-                                        <form method="get" action="{{route('delete/', $video->id)}}"><input type="submit" value="Delete"></form>
-                                    <button>Edit</button>
+                                        <form method="get" action="{{route('delete/', $video->id)}}">
+                                            <p class="tm-catalog-item-text"><input type="submit" value="Delete ✗"></p>
+                                        </form>
+                                        <form method="get" action="{{route('edit/', $video->id)}}">
+                                            <p class="tm-catalog-item-text"><input type="submit" value="Edit ✍️"></p>
+                                        </form>
                                     @endif
                                 </div>
                         </div>

@@ -49,9 +49,12 @@
                             <h3 class="tm-text-primary mb-3 tm-catalog-item-title">{{$video->title}}</h3>
                             <p class="tm-catalog-item-text">{{$video->desc}}</p>
                             <p class="tm-catalog-item-text">{{$video->created_at}}</p>
-                            <!--<a href="{{route('delete/', $video->id)}}">Delete</a>-->
-                            <form method="get" action="{{route('delete/', $video->id)}}"><input type="submit" value="Delete"></form>
-                            <button>Edit</button>
+                            <form method="get" action="{{route('delete/', $video->id)}}">
+                                <p class="tm-catalog-item-text"><input type="submit" value="Delete ✗"></p>
+                            </form>
+                            <form method="get" action="{{route('edit/', $video->id)}}">
+                                <p class="tm-catalog-item-text"><input type="submit" value="Edit ✍️"></p>
+                            </form>
                         </div>
                         </div>
                 @endforeach

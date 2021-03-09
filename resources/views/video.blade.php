@@ -5,6 +5,7 @@
             <div class="col-md-8">
                     <h1>Add new video:</h1>
                     <form action="{{route('saveVid')}}" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
                     @csrf
                     Title<br>
                         <input type="text" name="title" value="" class="form form-control" required><br>

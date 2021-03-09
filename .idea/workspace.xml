@@ -131,11 +131,14 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
@@ -162,7 +165,7 @@
       <workItem from="1614883336704" duration="1766000" />
       <workItem from="1615041048588" duration="28935000" />
       <workItem from="1615226197097" duration="12999000" />
-      <workItem from="1615298068604" duration="8474000" />
+      <workItem from="1615298068604" duration="13044000" />
     </task>
     <servers />
   </component>

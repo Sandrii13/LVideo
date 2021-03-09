@@ -48,5 +48,24 @@ class VideoController extends Controller
        $users = $video->user;
        return view('video-page',compact( 'video', 'users'));
     }
+    public function show4edit($id){
+        $video = Video::where('id',$id)->first();
+        $users = $video->user;
+        return view('video-page-edit',compact( 'video', 'users'));
+    }
+    public function delete($id){
+        $video = Video::where('id',$id)->first();
+        $video->delete();
+
+        return back();
+    }
+
+    public function edit(Request $request){
+        $request = $request->all();
+        DB::table('videos')
+            ->where('id', $request['id'])
+            ->update(['desc' => $request['desc'], 'title' => $request['title']]);
+        return redirect()->route('home');
+    }
 
 }
