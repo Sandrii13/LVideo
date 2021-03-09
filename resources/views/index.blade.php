@@ -49,6 +49,7 @@
                                 </div>
                                 <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                     <h3 class="tm-text-primary mb-3 tm-catalog-item-title">{{$video->title}}</h3>
+                                    @if(Auth::user()->role_id == 2 || Auth::user()->role_id == 3 || Auth::user()->role_id == 4)
                                     <p class="tm-catalog-item-text">{{$video->desc}}</p>
                                     <p class="tm-catalog-item-text">{{$video->created_at}}</p>
                                     @if($video['user_id'] == Auth::user()->id || Auth::user()->id == 3)
@@ -58,6 +59,7 @@
                                         <form method="get" action="{{route('edit/', $video->id)}}">
                                             <p class="tm-catalog-item-text"><input class="btn-primary" type="submit" value="Edit ✍️"></p>
                                         </form>
+                                    @endif
                                     @endif
                                 </div>
                         </div>
