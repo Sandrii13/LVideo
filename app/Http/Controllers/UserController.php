@@ -32,4 +32,18 @@ class UserController extends Controller
 
     }
 
+    public function showEdit($id){
+        $users = User::where('id',$id)->first();
+
+        return view('user-edit',compact( 'users'));
+    }
+    public function editUser(Request $request){
+        $request = $request->all();
+        DB::table('users')
+            ->where('id', $request['id'])
+            ->update(['name' => $request['name']]);
+        return redirect()->route('profile');
+        //return redirect()->route('user');
+    }
+
 }

@@ -13,7 +13,7 @@
                         <input type="text" name="desc" value="" class="form form-control" required><br>
                         Add video
                         <input type="file" name="video"><br><br>
-                        <input type="submit" value="Save"><br><br>
+                        <input class="btn-primary" type="submit" value="Save"><br><br>
                     </form>
             </div>
         </div>

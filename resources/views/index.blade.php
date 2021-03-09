@@ -53,10 +53,10 @@
                                     <p class="tm-catalog-item-text">{{$video->created_at}}</p>
                                     @if($video['user_id'] == Auth::user()->id || Auth::user()->id == 3)
                                         <form method="get" action="{{route('delete/', $video->id)}}">
-                                            <p class="tm-catalog-item-text"><input type="submit" value="Delete ✗"></p>
+                                            <p class="tm-catalog-item-text"><input class="btn-primary" type="submit" value="Delete ✗"></p>
                                         </form>
                                         <form method="get" action="{{route('edit/', $video->id)}}">
-                                            <p class="tm-catalog-item-text"><input type="submit" value="Edit ✍️"></p>
+                                            <p class="tm-catalog-item-text"><input class="btn-primary" type="submit" value="Edit ✍️"></p>
                                         </form>
                                     @endif
                                 </div>

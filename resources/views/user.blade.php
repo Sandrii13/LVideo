@@ -20,9 +20,12 @@
 
                     <div class="card-body">
                         @foreach($users as $user)
-                            @if($user['id'] == Auth::user()->id)
+                            @if($user->id == Auth::user()->id)
                         <p>Name: {{$user->name}}</p>
                             <p>Email: {{$user->email}}</p>
+                                <form method="get" action="{{route('editUser/', $user->id)}}">
+                                    <p class="tm-catalog-item-text"><input class="btn-primary" type="submit" value="Edit name ✍️"></p>
+                                </form>
                             @endif
                             @endforeach
 
@@ -50,10 +53,10 @@
                             <p class="tm-catalog-item-text">{{$video->desc}}</p>
                             <p class="tm-catalog-item-text">{{$video->created_at}}</p>
                             <form method="get" action="{{route('delete/', $video->id)}}">
-                                <p class="tm-catalog-item-text"><input type="submit" value="Delete ✗"></p>
+                                <p class="tm-catalog-item-text"><input class="btn-primary" type="submit" value="Delete ✗"></p>
                             </form>
                             <form method="get" action="{{route('edit/', $video->id)}}">
-                                <p class="tm-catalog-item-text"><input type="submit" value="Edit ✍️"></p>
+                                <p class="tm-catalog-item-text"><input class="btn-primary" type="submit" value="Edit ✍️"></p>
                             </form>
                         </div>
                         </div>

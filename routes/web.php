@@ -24,8 +24,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('/video/store', [App\Http\Controllers\VideoController::class, 'store'])->name('saveVid');
 Route::get('/profile', [App\Http\Controllers\UserController::class, 'index'])->name('profile');
 Route::get('/delete/{id}', [App\Http\Controllers\VideoController::class, 'delete'])->name('delete/');
+
 Route::post('/edited', [App\Http\Controllers\VideoController::class, 'edit'])->name('edited');
 Route::get('/edit/{id}', [App\Http\Controllers\VideoController::class, 'show4edit'])->name('edit/');
+
+Route::get('/editUser/{id}', [App\Http\Controllers\UserController::class, 'showEdit'])->name('editUser/');
+Route::post('/editedUser', [App\Http\Controllers\UserController::class, 'editUser'])->name('user');
+
 Route::get('/video/video-page', function (){
     return view('video-page');
 })->name('videoPage');

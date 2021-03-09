@@ -39,7 +39,7 @@
 							<div class="tm-video-description-box">
                                 <h2 class="mb-5 tm-video-title"><textarea  cols="50" rows="1" name="title" >{{$video->title}}</textarea></h2>
                                 <p class="mb-4"><textarea cols="100" rows="6" name="desc" >{{$video->desc}}</textarea></p>
-                                <input type="submit" value="Ok">
+                                <input class="btn-primary" type="submit" value="Ok">
                             </div>
 						</div>
 					</div>
