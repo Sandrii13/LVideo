@@ -45,9 +45,8 @@ class VideoController extends Controller
     }
     public function show($id){
        $video = Video::find($id);
-       $users = User::all();
-       $scores = Score::all();
-       return view('video-page',compact( 'video', 'users', 'scores'));
+       $users = $video->user;
+       return view('video-page',compact( 'video', 'users'));
     }
 
 }

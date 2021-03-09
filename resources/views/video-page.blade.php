@@ -43,7 +43,7 @@
 							<div class="tm-bg-gray tm-share-box">
 								<h6 class="tm-share-box-title mb-4">Created at: {{$video->created_at}}</h6>
 
-								<p class="mb-4">Author: {{$video->user_id}}</p>
+								<p class="mb-4">Author: {{$users->name}}</p>
                                 <!--<p class="mb-4">Author: {$score->score}}</p>-->
 								<a href="#" class="tm-bg-white px-5 mb-4 d-inline-block tm-text-primary tm-likes-box tm-liked">
 									<i class="fas fa-heart mr-3 tm-liked-icon"></i>
