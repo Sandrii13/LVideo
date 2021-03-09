@@ -3,16 +3,6 @@
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,7 +24,9 @@ Route::post('/editedUser', [App\Http\Controllers\UserController::class, 'editUse
 Route::get('/video/video-page', function (){
     return view('video-page');
 })->name('videoPage');
+
 Route::get('/video/add', function (){
     return view('video');
 })->name('addVideo');
+
 Route::resources(['video'=>VideoController::class]);
