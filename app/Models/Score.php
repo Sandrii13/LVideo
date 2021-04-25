@@ -11,11 +11,13 @@ class Score extends Model
 
     protected $fillable = [
         'score',
+        'user',
+        'video',
     ];
     public function user(){
-        return $this->belongsToMany('App\User','id');
+        return $this->belongsToMany(User::class);
     }
     public function video(){
-        return $this->belongsToMany('App\Video','id');
+        return $this->belongsToMany(Video::class);
     }
 }

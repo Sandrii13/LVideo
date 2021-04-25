@@ -52,6 +52,9 @@
                                     @if(Auth::user()->role_id == 2 || Auth::user()->role_id == 3 || Auth::user()->role_id == 4)
                                     <p class="tm-catalog-item-text">{{$video->desc}}</p>
                                     <p class="tm-catalog-item-text">{{$video->created_at}}</p>
+                                    <div id="score">
+                                        <a href="{{route('scores',$video->id)}}">★Put a score to this video</a><br>
+                                    </div>
                                     @if($video['user_id'] == Auth::user()->id || Auth::user()->id == 3)
                                         <form method="get" action="{{route('delete/', $video->id)}}">
                                             <p class="tm-catalog-item-text"><input class="btn-primary" type="submit" value="Delete ✗"></p>

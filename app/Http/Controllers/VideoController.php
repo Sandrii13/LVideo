@@ -67,5 +67,11 @@ class VideoController extends Controller
             ->update(['desc' => $request['desc'], 'title' => $request['title']]);
         return redirect()->route('home');
     }
+    public function score($id)
+    {
+        $video = Video::find($id);
+        $users = User::all();
+        return view('video-score', compact('video', 'users'));
+    }
 
 }

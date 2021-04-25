@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\ScoreController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,6 +21,11 @@ Route::get('/edit/{id}', [App\Http\Controllers\VideoController::class, 'show4edi
 
 Route::get('/editUser/{id}', [App\Http\Controllers\UserController::class, 'showEdit'])->name('editUser/');
 Route::post('/editedUser', [App\Http\Controllers\UserController::class, 'editUser'])->name('user');
+
+Route::get('/videos/{video}/score', [App\Http\Controllers\VideoController::class, 'score'])->name('scores');
+Route::resources([
+    'score' => ScoreController::class,
+]);
 
 Route::get('/video/video-page', function (){
     return view('video-page');

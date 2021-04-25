@@ -11,6 +11,9 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
@@ -166,6 +169,7 @@
       <workItem from="1615041048588" duration="28935000" />
       <workItem from="1615226197097" duration="12999000" />
       <workItem from="1615298068604" duration="20220000" />
+      <workItem from="1617715765589" duration="83000" />
     </task>
     <servers />
   </component>

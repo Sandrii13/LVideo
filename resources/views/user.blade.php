@@ -10,6 +10,7 @@
         <!-- https://fonts.google.com/ -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/templatemo-video-catalog.css">
+
     </head>
 
     <div class="container">
